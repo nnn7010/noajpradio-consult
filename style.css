@@ -868,9 +868,9 @@ footer p {
     letter-spacing: 0.04em;
   }
   .service-text h3 {
-    max-width: 260px;
-    font-size: 1.32rem;
-    line-height: 1.16;
+    max-width: none;
+    font-size: 1.18rem;
+    line-height: 1.25;
     margin-bottom: 18px;
   }
   .service-toggle {
