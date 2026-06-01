@@ -31,6 +31,19 @@ const solText = document.querySelector('.solution-text');
 if (solImg) addReveal(solImg, 'reveal-left', 0);
 if (solText) addReveal(solText, 'reveal-right', 120);
 
+// Service detail
+const serviceH2 = document.querySelector('.service-detail h2');
+const serviceIntro = document.querySelector('.service-intro');
+if (serviceH2) addReveal(serviceH2, 'reveal', 0);
+if (serviceIntro) addReveal(serviceIntro, 'reveal', 80);
+document.querySelectorAll('.service-row').forEach((row, i) => {
+  const img = row.querySelector('.service-img');
+  const text = row.querySelector('.service-text');
+  const even = i % 2 === 1;
+  if (img) addReveal(img, even ? 'reveal-right' : 'reveal-left', 0);
+  if (text) addReveal(text, even ? 'reveal-left' : 'reveal-right', 120);
+});
+
 // How it works
 const howH2 = document.querySelector('.how-it-works h2');
 if (howH2) addReveal(howH2, 'reveal', 0);

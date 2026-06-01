@@ -193,6 +193,72 @@ a { text-decoration: none; }
   margin-bottom: 14px;
 }
 
+/* ===== SERVICE DETAIL ===== */
+.service-detail {
+  padding: 80px 0;
+  background: var(--bg);
+}
+.service-head {
+  max-width: 620px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.service-detail h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.service-intro {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+  padding: 36px 0;
+}
+/* service-head is the first child, so odd nth-child = 2nd, 4th rows */
+.service-row:nth-child(odd) .service-img {
+  order: 2;
+}
+.service-img img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--radius-lg);
+  margin: 0 auto;
+  box-shadow: 0 12px 40px rgba(30,58,47,0.1);
+}
+.service-label {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  background: var(--accent-light);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+}
+.service-text h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+.service-text p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+.service-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* ===== HOW IT WORKS ===== */
 .how-it-works {
   padding: 80px 0;
@@ -627,6 +693,10 @@ footer p {
   .hero-sub { margin: 0 auto 36px; }
   .solution .container { grid-template-columns: 1fr; }
   .solution-image { order: -1; }
+  .service-row { grid-template-columns: 1fr; gap: 28px; padding: 28px 0; }
+  .service-row:nth-child(odd) .service-img { order: 0; }
+  .service-text { text-align: center; }
+  .service-text .service-label { margin-left: auto; margin-right: auto; }
   .plans-grid { grid-template-columns: 1fr; }
   .plan-card.plan-featured { order: -1; }
   .problem-list { grid-template-columns: 1fr; }
