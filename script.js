@@ -34,6 +34,15 @@ const solText = document.querySelector('.solution-text');
 if (solImg) addReveal(solImg, 'reveal-left', 0);
 if (solText) addReveal(solText, 'reveal-right', 120);
 
+// Outcome
+const outcomeH2 = document.querySelector('.outcome h2');
+if (outcomeH2) addReveal(outcomeH2, 'reveal', 0);
+document.querySelectorAll('.outcome-card').forEach((card, i) => {
+  addReveal(card, 'reveal', i * 100);
+});
+const outcomeNote = document.querySelector('.outcome-note');
+if (outcomeNote) addReveal(outcomeNote, 'reveal', 160);
+
 // Service detail
 const serviceH2 = document.querySelector('.service-detail h2');
 const serviceIntro = document.querySelector('.service-intro');
@@ -45,6 +54,13 @@ document.querySelectorAll('.service-row').forEach((row, i) => {
   const even = i % 2 === 1;
   if (img) addReveal(img, even ? 'reveal-right' : 'reveal-left', 0);
   if (text) addReveal(text, even ? 'reveal-left' : 'reveal-right', 120);
+});
+
+// Sample feedback
+const sampleH2 = document.querySelector('.sample-feedback h2');
+if (sampleH2) addReveal(sampleH2, 'reveal', 0);
+document.querySelectorAll('.feedback-block').forEach((block, i) => {
+  addReveal(block, 'reveal', i * 90);
 });
 
 // How it works
