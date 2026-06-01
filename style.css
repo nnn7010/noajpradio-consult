@@ -677,9 +677,14 @@ a { text-decoration: none; }
   margin-bottom: 24px;
   text-wrap: balance;
 }
-.launch-pricing {
-  max-width: 780px;
+.plan-notices {
+  max-width: 920px;
   margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.plan-notice {
   padding: 14px 18px;
   display: flex;
   align-items: center;
@@ -689,7 +694,7 @@ a { text-decoration: none; }
   background: var(--bg-alt);
   box-shadow: 0 8px 24px rgba(30,58,47,0.06);
 }
-.launch-pricing span {
+.plan-notice span {
   display: inline-flex;
   align-items: center;
   min-height: 30px;
@@ -701,7 +706,7 @@ a { text-decoration: none; }
   font-weight: 800;
   white-space: nowrap;
 }
-.launch-pricing p {
+.plan-notice p {
   margin: 0;
   color: var(--bg-dark);
   font-size: 0.95rem;
@@ -1300,17 +1305,22 @@ footer p {
   .feedback-block p {
     font-size: 0.95rem;
   }
-  .launch-pricing {
+  .plan-notices {
     margin: 0 0 30px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .plan-notice {
+    margin: 0;
     padding: 14px;
     display: block;
     border-radius: var(--radius);
   }
-  .launch-pricing span {
+  .plan-notice span {
     width: fit-content;
     margin-bottom: 10px;
   }
-  .launch-pricing p {
+  .plan-notice p {
     font-size: 0.92rem;
     line-height: 1.6;
   }
