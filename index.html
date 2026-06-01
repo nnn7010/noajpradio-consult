@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Japanese Learning Consulting — Noa JP Radio</title>
+  <title>Japanese Learning Advising — Noa JP Radio</title>
+  <meta name="description" content="Personalized written advising for Japanese learners who feel stuck. Choose monthly, bi-weekly, or weekly support with a Notion dashboard and text Q&A.">
+  <meta property="og:title" content="Japanese Learning Advising — Noa JP Radio">
+  <meta property="og:description" content="Personalized written guidance for Japanese learners who need a clearer plan, not another random method.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,9 +20,18 @@
   <section class="hero">
     <div class="container">
       <div class="hero-text">
-        <h1>Your Japanese progress starts with better <span>learning design.</span></h1>
-        <p class="hero-sub">Build a study plan, track your progress, and stay on the right path — with personalized Japanese learning consulting designed for you.</p>
-        <a href="#plans" class="btn-primary">See Plans</a>
+        <p class="eyebrow">Personalized advising for Japanese learners</p>
+        <h1>Stop collecting methods. Build a Japanese study system you can actually keep using.</h1>
+        <p class="hero-sub">Choose the support rhythm that fits your study life: monthly, bi-weekly, or weekly written guidance from Noa.</p>
+        <div class="hero-actions">
+          <a href="#plans" class="btn-primary">Compare plans</a>
+          <a href="#fit" class="btn-secondary">See if it fits</a>
+        </div>
+        <div class="hero-facts" aria-label="Service summary">
+          <span>3 support levels</span>
+          <span>Text-based</span>
+          <span>Cancel anytime</span>
+        </div>
       </div>
       <div class="hero-image">
         <img src="images/hero-character.png" alt="Noa JP Radio character">
@@ -47,6 +60,10 @@
           <span class="problem-text">You've been taking lessons, but you don't feel like you're actually improving.</span>
         </li>
       </ul>
+      <div class="problem-note">
+        <strong>You probably do not need more resources.</strong>
+        <p>You need a small weekly loop: try something, report what happened, adjust the plan, and keep going.</p>
+      </div>
     </div>
   </section>
 
@@ -57,9 +74,9 @@
         <img src="images/study-desk.png" alt="Japanese study desk">
       </div>
       <div class="solution-text">
-        <p class="solution-hook">The problem isn't the method you chose — it's not knowing what that method is actually building in you.</p>
+        <p class="solution-hook">The problem is not the method you chose. It is not knowing what that method is actually building in you.</p>
         <h2>I don't teach Japanese.<br>I help you build the system to learn it on your own.</h2>
-        <p>From building your study plan and tracking your progress, to recommending resources and adjusting your direction along the way — everything is managed through your own personalized Notion dashboard, so your learning stays visible and on track.</p>
+        <p>From building your study plan and tracking your progress, to recommending resources and adjusting your direction along the way, everything is managed through your own personalized Notion dashboard so your learning stays visible and on track.</p>
         <p>Instead of spending more time and money on lessons, the goal is to get you to a place where you can learn effectively on your own. That's what this service is for.</p>
       </div>
     </div>
@@ -69,8 +86,8 @@
   <section class="service-detail">
     <div class="container">
       <div class="service-head">
-        <h2>What you actually get</h2>
-        <p class="service-intro">A closer look at what's behind each plan.</p>
+        <h2>What you get each month</h2>
+        <p class="service-intro">The plans differ by frequency, but the core support stays the same.</p>
       </div>
 
       <div class="service-row">
@@ -80,8 +97,14 @@
         <div class="service-text">
           <span class="service-label">Feedback session</span>
           <h3>A personalized review of your progress</h3>
-          <p>I look at what you've actually been studying — your logs, your questions, where you got stuck — and write back with what's working, what's holding you back, and exactly what to focus on next.</p>
-          <p>It's not a generic template. Every session is a direct response to your situation, written into your Notion dashboard so you can act on it right away.</p>
+          <button class="service-toggle" type="button" aria-expanded="false" aria-controls="service-feedback-panel">
+            <span>Details</span>
+            <span class="service-toggle-icon">+</span>
+          </button>
+          <div class="service-panel" id="service-feedback-panel">
+            <p>I look at what you've actually been studying: your logs, your questions, where you got stuck, and what changed since your last check-in. Then I write back with what's working, what's holding you back, and exactly what to focus on next.</p>
+            <p>It's not a generic template. Every session is a direct response to your situation, written into your Notion dashboard so you can act on it right away.</p>
+          </div>
         </div>
       </div>
 
@@ -92,8 +115,14 @@
         <div class="service-text">
           <span class="service-label">Personalized Notion dashboard</span>
           <h3>Your learning home base</h3>
-          <p>A custom study roadmap and progress tracker, built around your current level and goals. It's where your plan, my feedback, and your progress all live in one place.</p>
-          <p>Instead of scattered notes and half-finished apps, you get one clear view of where you are and what comes next — so your learning stays visible and easy to keep going.</p>
+          <button class="service-toggle" type="button" aria-expanded="false" aria-controls="service-dashboard-panel">
+            <span>Details</span>
+            <span class="service-toggle-icon">+</span>
+          </button>
+          <div class="service-panel" id="service-dashboard-panel">
+            <p>A custom study roadmap and progress tracker, built around your current level, goals, schedule, and learning style. It's where your plan, my feedback, and your progress all live in one place.</p>
+            <p>Instead of scattered notes and half-finished apps, you get one clear view of where you are and what comes next so your learning stays visible and easy to keep going.</p>
+          </div>
         </div>
       </div>
 
@@ -103,9 +132,15 @@
         </div>
         <div class="service-text">
           <span class="service-label">Text Q&amp;A</span>
-          <h3>Ask anytime</h3>
-          <p>Stuck on a method, a resource, or a grammar point? Send your question on Discord and get a clear written answer — no waiting for a scheduled call.</p>
-          <p>Because everything is in text, you can re-read it anytime and run it through a translation tool if English isn't your strong point. You never have to stay stuck for long.</p>
+          <h3>Ask without waiting for a call</h3>
+          <button class="service-toggle" type="button" aria-expanded="false" aria-controls="service-qa-panel">
+            <span>Details</span>
+            <span class="service-toggle-icon">+</span>
+          </button>
+          <div class="service-panel" id="service-qa-panel">
+            <p>Stuck on a method, a resource, or a grammar point? Send your question on Discord and get a clear written answer — no waiting for a scheduled call.</p>
+            <p>Because everything is in text, you can re-read it anytime and run it through a translation tool if English isn't your strong point. You never have to stay stuck for long.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -149,55 +184,83 @@
   </section>
 
   <!-- PLANS -->
+  <section class="fit" id="fit">
+    <div class="container">
+      <h2>This is for you if...</h2>
+      <div class="fit-grid">
+        <div class="fit-card">
+          <h3>A good fit</h3>
+          <ul>
+            <li>You study alone and want a clearer weekly direction.</li>
+            <li>You are tired of switching methods whenever motivation drops.</li>
+            <li>You want to use Japanese, not only understand textbook explanations.</li>
+            <li>You prefer thoughtful written feedback over live lessons.</li>
+          </ul>
+        </div>
+        <div class="fit-card muted">
+          <h3>Not the best fit</h3>
+          <ul>
+            <li>You want live conversation lessons or speaking practice calls.</li>
+            <li>You need instant replies every day.</li>
+            <li>You only want JLPT test-drill coaching.</li>
+            <li>You want someone else to study for you. I wish that existed too.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
   <section class="plans" id="plans">
     <div class="container">
       <h2>Choose the plan that fits your pace</h2>
       <div class="plans-grid">
-
         <div class="plan-card">
           <h3>Starter</h3>
-          <div class="plan-price">$25<span>/mo</span></div>
-          <p class="plan-tagline">One monthly check-in to get your learning on track</p>
+          <div class="plan-price">$25<span>/month</span></div>
+          <p class="plan-tagline">A monthly reset for learners who want a clearer direction without heavy support.</p>
           <ul class="plan-features">
-            <li>1 feedback session / month</li>
+            <li>1 written feedback session per month</li>
             <li>Personalized Notion dashboard</li>
             <li>Monthly roadmap update</li>
-            <li>3 text Q&As / month</li>
+            <li>3 text Q&As per month</li>
             <li>Standard response time</li>
           </ul>
-          <span class="btn-coming-soon">Coming Soon</span>
+          <a href="https://ko-fi.com/noa_jp_radio/tiers" class="btn-outline">Choose Starter</a>
         </div>
 
-        <!-- TODO: リリース後に class="plan-card plan-featured" と <div class="badge">Most Popular</div> を戻す -->
-        <div class="plan-card">
+        <div class="plan-card plan-featured">
+          <div class="badge">Recommended</div>
           <h3>Growth</h3>
-          <div class="plan-price">$45<span>/mo</span></div>
-          <p class="plan-tagline">Bi-weekly support to keep moving forward</p>
+          <div class="plan-price">$45<span>/month</span></div>
+          <p class="plan-tagline">Bi-weekly support for learners who want momentum without weekly pressure.</p>
           <ul class="plan-features">
-            <li>2 feedback sessions / month</li>
+            <li>2 written feedback sessions per month</li>
             <li>Personalized Notion dashboard</li>
             <li>Bi-weekly roadmap update</li>
-            <li>8 text Q&As / month</li>
+            <li>8 text Q&As per month</li>
             <li>Standard response time</li>
+            <li>Cancel anytime through Ko-fi</li>
           </ul>
-          <span class="btn-coming-soon">Coming Soon</span>
+          <a href="https://ko-fi.com/noa_jp_radio/tiers" class="btn-primary">Choose Growth</a>
         </div>
 
         <div class="plan-card">
           <h3>Premium</h3>
-          <div class="plan-price">$95<span>/mo</span></div>
-          <p class="plan-tagline">Weekly guidance with deeper, more personalized support</p>
+          <div class="plan-price">$95<span>/month</span></div>
+          <p class="plan-tagline">Weekly guidance for learners who want closer support and faster adjustment.</p>
           <ul class="plan-features">
-            <li>4 feedback sessions / month</li>
+            <li>4 written feedback sessions per month</li>
             <li>Personalized Notion dashboard</li>
             <li>Weekly roadmap update</li>
-            <li>15 text Q&As / month</li>
+            <li>15 text Q&As per month</li>
             <li>Priority response time</li>
+            <li>Cancel anytime through Ko-fi</li>
           </ul>
-          <span class="btn-coming-soon">Coming Soon</span>
+          <a href="https://ko-fi.com/noa_jp_radio/tiers" class="btn-outline">Choose Premium</a>
         </div>
-
       </div>
+      <p class="plans-note">Not sure where to start? Growth is the best first choice for most learners because the two-week cycle gives you enough time to try, report, and adjust.</p>
     </div>
   </section>
 
@@ -213,7 +276,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Yes. Whether you're a complete beginner or an intermediate learner, the plan will be tailored to your current level and goals.</p>
+            <p>Yes. Whether you're a complete beginner or an intermediate learner, the plan will be tailored to your current level, goals, and available study time.</p>
           </div>
         </div>
 
@@ -267,6 +330,26 @@
           </div>
         </div>
 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is this a live lesson?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. This is asynchronous written advising. You study on your own, send updates and questions, and receive written guidance from Noa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What should I send each week?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Your study log, what felt easy or difficult, questions, and anything you tried in real Japanese. A simple weekly form will guide you.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -274,7 +357,7 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container">
-      <p>The reason you can't keep going isn't motivation — it's the lack of a system.<br>Let's build that system together.</p>
+      <p>The reason you can't keep going isn't motivation. It's the lack of a system.<br>Let's build that system together.</p>
       <a href="#plans" class="btn-primary">Choose Your Plan</a>
     </div>
   </section>

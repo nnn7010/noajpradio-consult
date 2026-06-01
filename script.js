@@ -15,6 +15,9 @@ function addReveal(el, type = 'reveal', delay = 0) {
 addReveal(document.querySelector('.hero-text h1'), 'reveal', 0);
 addReveal(document.querySelector('.hero-sub'), 'reveal', 80);
 addReveal(document.querySelector('.hero-text .btn-primary'), 'reveal', 160);
+document.querySelectorAll('.hero-facts span').forEach((item, i) => {
+  addReveal(item, 'reveal', 220 + i * 50);
+});
 const heroImg = document.querySelector('.hero-image');
 if (heroImg) addReveal(heroImg, 'reveal-right', 120);
 
@@ -49,6 +52,13 @@ const howH2 = document.querySelector('.how-it-works h2');
 if (howH2) addReveal(howH2, 'reveal', 0);
 document.querySelectorAll('.steps li').forEach((li, i) => {
   addReveal(li, 'reveal', i * 100);
+});
+
+// Fit
+const fitH2 = document.querySelector('.fit h2');
+if (fitH2) addReveal(fitH2, 'reveal', 0);
+document.querySelectorAll('.fit-card').forEach((card, i) => {
+  addReveal(card, 'reveal', i * 100);
 });
 
 // Plans
@@ -93,6 +103,16 @@ if (steps) {
   }, { threshold: 0.2 });
   lineObserver.observe(steps);
 }
+
+/* ===== SERVICE DETAIL ACCORDION ===== */
+document.querySelectorAll('.service-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!isOpen));
+    if (panel) panel.classList.toggle('open', !isOpen);
+  });
+});
 
 /* ===== FAQ SMOOTH ACCORDION ===== */
 document.querySelectorAll('.faq-question').forEach(button => {
