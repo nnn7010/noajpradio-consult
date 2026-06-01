@@ -867,6 +867,18 @@ a { text-decoration: none; }
   color: var(--text-on-dark);
   text-wrap: balance;
 }
+.final-cta .contact-note {
+  margin: 22px auto 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+}
+.final-cta .contact-note a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* ===== FOOTER ===== */
 footer {
@@ -988,6 +1000,12 @@ footer p {
 .faq-answer.open {
   max-height: 300px;
   padding: 0 24px 20px;
+}
+.faq-answer a {
+  color: var(--accent-hover);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ===== PLAN CARD HOVER ===== */
