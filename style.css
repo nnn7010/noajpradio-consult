@@ -451,10 +451,47 @@ a { text-decoration: none; }
   background: var(--text-muted);
 }
 
+/* ===== ABOUT ===== */
+.about {
+  padding: 84px 0;
+  background: var(--bg-alt);
+}
+.about-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.about h2 {
+  max-width: 720px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0;
+  margin-bottom: 28px;
+  text-wrap: balance;
+}
+.about-copy {
+  display: grid;
+  gap: 18px;
+  padding: 30px 34px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 36px rgba(30,58,47,0.07);
+}
+.about-copy p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.about-copy p:last-child {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* ===== PLANS ===== */
 .plans {
   padding: 80px 0;
-  background: var(--bg-alt);
+  background: var(--bg);
 }
 .plans h2 {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
@@ -839,6 +876,7 @@ footer p {
   .service-detail h2,
   .how-it-works h2,
   .fit h2,
+  .about h2,
   .plans h2,
   .faq h2 {
     max-width: 330px;
@@ -958,6 +996,17 @@ footer p {
   }
   .plans-grid,
   .fit-grid { grid-template-columns: 1fr; }
+  .about {
+    padding: 70px 0;
+  }
+  .about-copy {
+    padding: 24px 22px;
+    gap: 16px;
+  }
+  .about-copy p {
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
   .problem-list { grid-template-columns: 1fr; }
   .problem-list li:last-child { grid-column: auto; max-width: 100%; }
 }
