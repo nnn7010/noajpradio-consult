@@ -677,6 +677,26 @@ a { text-decoration: none; }
   margin-bottom: 48px;
   text-wrap: balance;
 }
+.launch-pricing {
+  max-width: 760px;
+  margin: -22px auto 36px;
+  padding: 20px 24px;
+  border: 1px solid rgba(63,143,90,0.28);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-light);
+}
+.launch-pricing strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--bg-dark);
+  font-size: 0.95rem;
+}
+.launch-pricing p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
 .plans-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1269,6 +1289,10 @@ footer p {
   }
   .feedback-block p {
     font-size: 0.95rem;
+  }
+  .launch-pricing {
+    margin: -18px 0 28px;
+    padding: 18px 20px;
   }
   .plans-grid,
   .fit-grid { grid-template-columns: 1fr; }
