@@ -674,28 +674,38 @@ a { text-decoration: none; }
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   text-wrap: balance;
 }
 .launch-pricing {
-  max-width: 760px;
-  margin: -22px auto 36px;
-  padding: 20px 24px;
-  border: 1px solid rgba(63,143,90,0.28);
-  border-left: 4px solid var(--accent);
-  border-radius: var(--radius);
-  background: var(--accent-light);
+  max-width: 780px;
+  margin: 0 auto 48px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-alt);
+  box-shadow: 0 8px 24px rgba(30,58,47,0.06);
 }
-.launch-pricing strong {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--bg-dark);
-  font-size: 0.95rem;
+.launch-pricing span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
 }
 .launch-pricing p {
-  color: var(--text-muted);
+  margin: 0;
+  color: var(--bg-dark);
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 .plans-grid {
   display: grid;
@@ -1291,8 +1301,18 @@ footer p {
     font-size: 0.95rem;
   }
   .launch-pricing {
-    margin: -18px 0 28px;
-    padding: 18px 20px;
+    margin: 0 0 30px;
+    padding: 14px;
+    display: block;
+    border-radius: var(--radius);
+  }
+  .launch-pricing span {
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+  .launch-pricing p {
+    font-size: 0.92rem;
+    line-height: 1.6;
   }
   .plans-grid,
   .fit-grid { grid-template-columns: 1fr; }
