@@ -144,3 +144,15 @@ document.querySelectorAll('.faq-question').forEach(button => {
     }
   });
 });
+
+/* ===== ANALYTICS ===== */
+document.querySelectorAll('[data-analytics-event]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof gtag !== 'function') return;
+
+    gtag('event', link.dataset.analyticsEvent, {
+      plan: link.dataset.plan || 'unknown',
+      link_url: link.href
+    });
+  });
+});
